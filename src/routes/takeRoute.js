@@ -1,14 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const controller = require('../controllers/takeController')
 const request = require("request");
 const fs = require('fs');
-const data = require('../data/data.json');
-const { nextTick } = require('process');
-
-router.post('/', controller.post);
-router.put('/:id', controller.put);
-router.delete('/:id', controller.delete);
 
 request.get({
     "headers": 
