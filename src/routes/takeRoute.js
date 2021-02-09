@@ -42,18 +42,20 @@ const manipulateData = (data) => {
 
     var repositories = [];
     data.forEach(element => {
-        repositories.push({
-            "header": {
-                "type": "application/vnd.lime.media-link+json",
-                "value": {
-                    "title": element.name,
-                    "text": element.description,
-                    "type": "image/png",
-                    "uri": "https://avatars.githubusercontent.com/u/4369522?s=200&v=4"
+        console.log()
+        if (data.indexOf(element) < 5) {
+            repositories.push({
+                "header": {
+                    "type": "application/vnd.lime.media-link+json",
+                    "value": {
+                        "title": element.name,
+                        "text": element.description,
+                        "type": "image/png",
+                        "uri": "https://avatars.githubusercontent.com/u/4369522?s=200&v=4"
+                    }
                 }
-            }
-        
-        });
+            });
+        }
     });
     // console.log(repositories);
 
