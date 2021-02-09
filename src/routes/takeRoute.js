@@ -16,8 +16,8 @@ request.get({
             "content-type": "application/json",
             "User-Agent" : "takeapi"
         },
-    // "url": "https://api.github.com/orgs/takenet/repos?sort=created&direction=asc",
-    "url": "https://reqbin.com/echo/get/json",
+    "url": "https://api.github.com/orgs/takenet/repos?sort=created&direction=asc",
+    // "url": "https://reqbin.com/echo/get/json",
     "body": JSON.stringify({
         "firstname": "Nic",
         "lastname": "Raboy"
