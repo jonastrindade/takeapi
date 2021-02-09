@@ -17,7 +17,6 @@ request.get({
             "User-Agent" : "takeapi"
         },
     "url": "https://api.github.com/orgs/takenet/repos?sort=created&direction=asc",
-    // "url": "https://reqbin.com/echo/get/json",
     "body": JSON.stringify({
         "firstname": "Nic",
         "lastname": "Raboy"
@@ -27,7 +26,7 @@ request.get({
         return console.dir(error);
     }
 
-    var dataJson = data;
+    var dataJson = JSON.parse(body);
     const dataSend = manipulateData(dataJson)
 
     fs.writeFile("./src/data/takeData.json", JSON.stringify(dataSend), function(err){
