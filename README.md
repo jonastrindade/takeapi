@@ -15,7 +15,3 @@ localhost:3000/repositories (route to five take repositories)
 if you want to test with builder need to configure ngrok
 
 https://www.npmjs.com/package/ngrok (in this link you can find out or send me a message (+5531997675537 ))
-
-
-
-bot json ?
