@@ -3,7 +3,8 @@ const router = express.Router();
 const controller = require('../controllers/takeController')
 const request = require("request");
 const fs = require('fs');
-const data = require('../data/data.json')
+const data = require('../data/data.json');
+const { nextTick } = require('process');
 
 router.post('/', controller.post);
 router.put('/:id', controller.put);
@@ -42,7 +43,6 @@ const manipulateData = (data) => {
 
     var repositories = [];
     data.forEach(element => {
-        console.log()
         if (data.indexOf(element) < 5) {
             repositories.push({
                 "header": {
@@ -55,9 +55,10 @@ const manipulateData = (data) => {
                     }
                 }
             });
+        } else {
+            return false;
         }
     });
-    // console.log(repositories);
 
     var fiveRepositories = {
         "itemType": "application/vnd.lime.document-select+json",
